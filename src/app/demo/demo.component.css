@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 15px;
+    }
+    .profile-card img {
+        width: 80px;
+        height: 80px;
+    }
+    .history-card, .pending-request-card {
+        padding: 10px;
+    }
+    .pending-request-card {
+        max-width: 100%;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .d-flex .ms-md-4 {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

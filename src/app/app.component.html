@@ -1,0 +1,14 @@
+<h1 style="color: blue; text-align: center;">{{title}} - {{page}}</h1>
+
+
+<div class="container mt-3">
+  <input 
+    type="text" 
+    [(ngModel)]="searchText" 
+    placeholder="ابحث هنا..." 
+    class="form-control" 
+    style="width: 300px; margin: auto;" />
+</div>
+
+
+<app-demo [searchText]="searchText"></app-demo>

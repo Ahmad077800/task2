@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 mb-4">
+      <div class="border d-flex flex-column p-4" style="background-color:#cec9c9; height: 100%; border-radius: 20px;">
+        <div class="d-flex align-items-center mb-4">
+          <div class="d-flex flex-column ms-3">
+            <p class="mb-1" [innerHTML]="name | highlight:searchText"></p>
+            <p class="mb-1" [innerHTML]="department | highlight:searchText"></p>
+            <p style="color: #777" class="mb-1" [innerHTML]="position | highlight:searchText"></p>
+          </div>
+          <a href="#" class="btn btn-outline-success ms-auto" style="width: 150px; text-decoration: none;">New Request</a>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+          <div class="d-flex align-items-start mb-3 mb-md-0">
+            <i class="fa-solid fa-user me-2" style="font-size: 50px; color: #6d6969;"></i>
+            <div>
+              <p class="mb-1 bold" style="color: black;">Reporting To:</p>
+              <p class="mb-0" [innerHTML]="manager | highlight:searchText"></p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-3 mb-md-0 ms-md-4">
+            <i class="fa-solid fa-arrow-trend-up me-2" style="font-size: 50px;color: #6d6969;"></i>
+            <div>
+              <p class="mb-1 bold" style="color: black;">Corporate Level:</p>
+              <p class="mb-0">Level {{corporateLevel}}</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-3 mb-md-0 ms-md-4">
+            <i class="fa-regular fa-hand me-2" style="font-size: 50px;color: #6d6969;"></i>
+            <div>
+              <p class="mb-1 bold" style="color: black;">Lifetime:</p>
+              <p class="mb-0" [innerHTML]="lifetime | highlight:searchText"></p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-3 mb-md-0 ms-md-4">
+            <i class="fa-solid fa-tree me-2" style="font-size: 50px;color: #6d6969;"></i>
+            <div>
+              <p class="mb-1 bold" style="color: black;">Vacation Days Left:</p>
+              <p class="mb-0">{{vacationDaysLeft}} Days</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start ms-md-4">
+            <i class="fa-solid fa-head-side-cough me-2" style="font-size: 50px;color: #6d6969;"></i>
+            <div>
+              <p class="mb-1 bold" style="color: black;">Sick Days Left:</p>
+              <p class="mb-0">{{sickDaysLeft}} Days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 mb-4">
+      <div class="border p-4" style="background-color:#cec9c9; height: 100%; border-radius: 20px;">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-calendar-days me-2" style="font-size: 50px; color:green;"></i>
+          <h6 class="mb-0">History</h6>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="border p-3" style="border-radius: 20px;background-color: #ffffff;">
+              <p [innerHTML]="type | highlight:searchText"></p>
+              <p>{{startDate}} - {{endDate}} {{days}} days</p>
+              <p>Approved by: {{approvedBy}}</p>
+            </div>
+          </div>
+          <!-- كرر هذا الجزء حسب الحاجة -->
+        </div>
+        <div class="d-flex justify-content-end m-3">
+          <a href="#" class="view-more-link">View More ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الفقرة الأخيرة مع الهايلايت -->
+  <p [innerHTML]="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ab autem itaque ducimus optio perferendis suscipit deserunt ullam consectetur reiciendis? Inventore officia molestiae a laborum nulla accusamus nam soluta quos.' | highlight:searchText"></p>
+</div>
